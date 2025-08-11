@@ -4,7 +4,7 @@ const projects = [
   {
     id: 1,
     title: "AI Mask Detector",
-    description: "AI-powered system on Raspberry Pi that detects face masks in real time, updates results to the cloud, and displays “Pass” or “Fail” on a web app with LED status indicators.",
+    description: "AI-powered system on Raspberry Pi that detects face masks in real time, updates results to the cloud, and displays “Pass” or “Fail” on a web app with LED status indicators",
     image: "/projects/Mask.webp",
     tags: ["Python", "JavaScript", "CSS", "HTML", "TensorFlow", "Firebase", "Raspberry Pi"],
     demoUrl: "#",
@@ -12,33 +12,23 @@ const projects = [
   },
   {
     id: 2,
-    title: "Orbit Analytics Dashboard",
+    title: "Movie Browsing App",
     description:
-      "Interactive analytics dashboard with data visualization and filtering capabilities.",
-    image: "/projects/project2.png",
-    tags: ["TypeScript", "D3.js", "Next.js"],
+      "Built a dynamic movie browsing app that fetches real-time data from a movie API. It lets users explore popular, upcoming, and past movies, with a favorites feature that saves selections for later use",
+    image: "/projects/MovieTheatre.jpg",
+    tags: ["JavaScript", "React", "HTML", "CSS", "REST API"],
     demoUrl: "#",
-    githubUrl: "#",
+    githubUrl: "https://github.com/braysimic/MovieFavorites",
   },
   {
     id: 3,
-    title: "E-commerce Platform",
+    title: "Dice Betting Game",
     description:
-      "Full-featured e-commerce platform with user authentication and payment processing.",
-    image: "/projects/project3.png",
-    tags: ["React", "Node.js", "Stripe"],
+      "Created an interactive betting game with a simple GUI, where users place bets, roll dice, and see real-time balance updates. The project showcases event-driven programming and game logic.",
+    image: "/projects/DicePic.jpg",
+    tags: ["Java", "OOP", "GUI"],
     demoUrl: "#",
-    githubUrl: "https://github.com/braysimic/MovieFavorites",
-  },
-  {
-    id: 4,
-    title: "E-commerce Platform",
-    description:
-      "Full-featured e-commerce platform with user authentication and payment processing.",
-    image: "/projects/project3.png",
-    tags: ["React", "Node.js", "Stripe"],
-    demoUrl: "#",
-    githubUrl: "https://github.com/braysimic/MovieFavorites",
+    githubUrl: "https://github.com/braysimic/DiceTycoon",
   },
 ];
 
