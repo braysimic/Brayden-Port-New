@@ -3,12 +3,12 @@ import { ArrowRight, ExternalLink, Github } from "lucide-react";
 const projects = [
   {
     id: 1,
-    title: "SaaS Landing Page",
-    description: "A beautiful landing page app using React and Tailwind.",
-    image: "/projects/project1.png",
-    tags: ["React", "TailwindCSS", "Supabase"],
+    title: "AI Mask Detector",
+    description: "AI-powered system on Raspberry Pi that detects face masks in real time, updates results to the cloud, and displays “Pass” or “Fail” on a web app with LED status indicators.",
+    image: "/projects/Mask.webp",
+    tags: ["Python", "JavaScript", "CSS", "HTML", "TensorFlow", "Firebase", "Raspberry Pi"],
     demoUrl: "#",
-    githubUrl: "#",
+    githubUrl: "https://github.com/braysimic/bsimic-project-rpi",
   },
   {
     id: 2,
@@ -28,7 +28,17 @@ const projects = [
     image: "/projects/project3.png",
     tags: ["React", "Node.js", "Stripe"],
     demoUrl: "#",
-    githubUrl: "#",
+    githubUrl: "https://github.com/braysimic/MovieFavorites",
+  },
+  {
+    id: 4,
+    title: "E-commerce Platform",
+    description:
+      "Full-featured e-commerce platform with user authentication and payment processing.",
+    image: "/projects/project3.png",
+    tags: ["React", "Node.js", "Stripe"],
+    demoUrl: "#",
+    githubUrl: "https://github.com/braysimic/MovieFavorites",
   },
 ];
 
@@ -87,7 +97,8 @@ export const ProjectsSection = () => {
                       target="_blank"
                       className="text-foreground/80 hover:text-primary transition-colors duration-300"
                     >
-                      <Github size={20} />
+                      <Github size={20}
+                      />
                     </a>
                   </div>
                 </div>
@@ -100,9 +111,9 @@ export const ProjectsSection = () => {
           <a
             className="cosmic-button w-fit flex items-center mx-auto gap-2"
             target="_blank"
-            href="https://github.com/machadop1407"
+            href="https://github.com/braysimic"
           >
-            Check My Github <ArrowRight size={16} />
+            Check Out My Github <ArrowRight size={16} />
           </a>
         </div>
       </div>
