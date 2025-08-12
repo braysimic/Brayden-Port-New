@@ -12,14 +12,15 @@ export const AboutSection = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
             <h3 className="text-2xl font-semibold">
-              Passionate Web Developer & Tech Creator
+              Passionate Software Engineer
             </h3>
 
             <p className="text-muted-foreground">
-            I’m a passionate developer who enjoys building creative and impactful projects, 
-            from AI-powered applications to modern web experiences. 
-            I focus on crafting solutions that are both functional and intuitive, 
-            with an eye for clean design and smooth user interaction.
+            I’m a dedicated software engineer who thrives on designing and building efficient, 
+            scalable, and impactful applications. From developing robust backend systems to 
+            crafting seamless user experiences, I aim to create solutions that are reliable, 
+            maintainable, and easy to use. I enjoy tackling complex problems with clean, well-structured code, 
+            and I’m driven by the challenge of turning ideas into high-quality, real-world software.
             </p>
 
             <p className="text-muted-foreground">
