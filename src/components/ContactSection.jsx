@@ -12,13 +12,31 @@ import {
 import { cn } from "@/lib/utils";
 import { useToast } from "@/hooks/use-toast";
 import { useState } from "react";
+import emailsjs from "emailjs-com";
 
 export const ContactSection = () => {
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
 
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  })
+
+  const SERVICE_ID = "service_yfrxqzs"
+  const TEMPLATE_ID = "template_m6yyqz2"
+  const PUBLIC_KEY = "obL7KSpUQKJxQOq8f"
+
+
   const handleSubmit = (e) => {
+
     e.preventDefault();
+
+    emailsjs.sendForm(SERVICE_ID, TEMPLATE_ID, e.target, PUBLIC_KEY).then((result) => {
+      alert("Message Sent")
+      setFormData({name: "", email: "", message: ""})
+    }).catch(() => alert("oops something went wrong, please try again."));
 
     setIsSubmitting(true);
 
@@ -57,7 +75,7 @@ export const ContactSection = () => {
                 <div>
                   <h4 className="font-medium"> Email</h4>
                   <a
-                    href="mailto:hello@gmail.com"
+                    href="mailto:bray.simic@gmail.com"
                     className="text-muted-foreground hover:text-primary transition-colors"
                   >
                     bray.simic@gmail.com
@@ -71,7 +89,7 @@ export const ContactSection = () => {
                 <div>
                   <h4 className="font-medium"> Phone</h4>
                   <a
-                    href="tel:+11234567890"
+                    href="tel:+14058209362"
                     className="text-muted-foreground hover:text-primary transition-colors"
                   >
                     +1 (405) 820-9362
@@ -93,7 +111,7 @@ export const ContactSection = () => {
 
             <div className="pt-8">
               <h4 className="font-medium mb-4"> Connect With Me</h4>
-              <div className="flex space-x-4 justify-center">
+              <div className="flex space-x-4 justify-center hover:scale-125 transition-transform duration-200">
                 <a href="https://www.linkedin.com/in/brayden-simic-a69537302/" target="_blank">
                   <Linkedin />
                 </a>
@@ -130,8 +148,10 @@ export const ContactSection = () => {
                   id="name"
                   name="name"
                   required
+                  value={formData.name}
                   className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-hidden foucs:ring-2 focus:ring-primary"
                   placeholder="Brayden Simic..."
+                  onChange={(e) => setFormData({...formData, name: e.target.value })}
                 />
               </div>
 
@@ -148,8 +168,11 @@ export const ContactSection = () => {
                   id="email"
                   name="email"
                   required
+                  value={formData.email}
                   className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-hidden foucs:ring-2 focus:ring-primary"
                   placeholder="john@gmail.com"
+                  onChange={(e) => setFormData({...formData, email: e.target.value })}
+
                 />
               </div>
 
@@ -165,8 +188,10 @@ export const ContactSection = () => {
                   id="message"
                   name="message"
                   required
+                  value={formData.message}
                   className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-hidden foucs:ring-2 focus:ring-primary resize-none"
                   placeholder="Hey! I'd like to talk about..."
+                  onChange={(e) => setFormData({...formData, message: e.target.value })}
                 />
               </div>
 
