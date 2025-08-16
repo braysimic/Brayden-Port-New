@@ -7,7 +7,7 @@ const projects = [
     description: "AI-powered system on Raspberry Pi that detects face masks in real time, updates results to the cloud, and displays “Pass” or “Fail” on a web app with LED status indicators",
     image: "/projects/Mask.webp",
     tags: ["Python", "JavaScript", "CSS", "HTML", "TensorFlow", "Firebase", "Raspberry Pi"],
-    demoUrl: "#",
+    // demoUrl: "#",
     githubUrl: "https://github.com/braysimic/bsimic-project-rpi",
   },
   {
@@ -17,18 +17,18 @@ const projects = [
       "Built a dynamic movie browsing app that fetches real-time data from a movie API. It lets users explore popular, upcoming, and past movies, with a favorites feature that saves selections for later use",
     image: "/projects/MovieTheatre.jpg",
     tags: ["JavaScript", "React", "HTML", "CSS", "REST API"],
-    demoUrl: "#",
+    // demoUrl: "#",
     githubUrl: "https://github.com/braysimic/MovieFavorites",
   },
   {
     id: 3,
-    title: "Dice Betting Game",
+    title: "AI Medical Assistant",
     description:
-      "Created an interactive betting game with a simple GUI, where users place bets, roll dice, and see real-time balance updates. The project showcases event-driven programming and game logic.",
-    image: "/projects/DicePic.jpg",
-    tags: ["Java", "OOP", "GUI"],
-    demoUrl: "#",
-    githubUrl: "https://github.com/braysimic/DiceTycoon",
+      "Full-stack healthcare chatbot powered by OpenAI that provides intelligent medical consultations with real-time messaging and conversation history",
+    image: "/projects/AI-Doctor.png",
+    tags: ["React", "Node.js", "TypeScript", "MongoDB", "OpenAI GPT API", "Express.js", "Tailwind CSS"],
+    // demoUrl: "#",
+    githubUrl: "https://github.com/braysimic/ai-medical-assistant",
   },
 ];
 
@@ -76,11 +76,11 @@ export const ProjectsSection = () => {
                 <div className="flex justify-between items-center">
                   <div className="flex space-x-3">
                     <a
-                      href={project.demoUrl}
+                      // href={project.demoUrl}
                       target="_blank"
                       className="text-foreground/80 hover:text-primary transition-colors duration-300"
                     >
-                      <ExternalLink size={20} />
+                      {/* <ExternalLink size={20} /> */}
                     </a>
                     <a
                       href={project.githubUrl}
